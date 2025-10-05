@@ -8,7 +8,7 @@ import (
 )
 
 type HTTPServer struct {
-	Addr string
+	Addr string `yaml:"address" env-required:"true"`
 }
 
 // env-default:"production"
@@ -47,4 +47,4 @@ func MustLoad() *Config {
 	}
 
 	return &cfg
-}
+} 

@@ -38,7 +38,7 @@ func main() {
 		Handler: router,
 	}
 
-	slog.Info("server started", slog.String("address", cfg.Addr))
+	slog.Info("server started", slog.String("address", cfg.HTTPServer.Addr))
 	// fmt.Println("server started", cfg.HTTPServer.Addr)
 
 	// GRACEFULLY STOPPING THE SERVER
